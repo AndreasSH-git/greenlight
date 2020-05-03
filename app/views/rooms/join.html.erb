@@ -28,6 +28,7 @@
               autofocus: true %>
         <%= f.submit t("room.login"), class: "btn btn-primary btn-sm col-sm-3 form-control join-form" %>
       </div>
+      <p></br>Mit der Teilnahme an Videokonferenzen besteht die Verpflichtung, sich an die <%= link_to("Nutzungsbedingungen", "https://bbb.gymwm.de/gymwm/nutzungsbedingungen.html", target: "_blank", rel: "noopener").html_safe %> zu halten. </p>
     <% end %>
   <% else %>
     <%= form_for room_path(@room), method: :post do |f| %>
