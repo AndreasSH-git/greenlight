@@ -14,9 +14,23 @@
 %>
 
 <footer class="footer pt-3">
-  <p class="text-center mb-1"><%=  link_to(" Impressum ", "https://www.gymnasium-weilheim.de/index.php?id=60", target: "_blank", rel: "noopener").html_safe %></p>
-  <p class="text-center mb-1"><%= link_to(" Datenschutzerklärung ", "https://www.gymnasium-weilheim.de/index.php?id=5384", target: "_blank", rel: "noopener").html_safe %></p>
-  <p class="text-center mb-1"><%= t("footer.powered_by", href: link_to(t("greenlight"), "https://bigbluebutton.org/2018/07/09/greenlight-2-0/", target: "_blank", rel: "noopener")).html_safe %> <%= Greenlight::Application::VERSION %></p>   
+  <div class="container mt-3 mb-3 text-center">
+    <div class="row">
+      <div class="col-lg-3 col-md-3">
+        <p class="text-center mb-1"><%=  link_to("Impressum", "https://bbb.gymwm.de/gymwm/impressum.html", target: "_blank", rel: "noopener").html_safe %></p>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <p class="text-center mb-1"><%= link_to("Datenschutzerklärung", "https://bbb.gymwm.de/gymwm/datenschutz.html", target: "_blank", rel: "noopener").html_safe %></p>
+      </div>
+      <div class="col-lg-3 col-md-3">
+         <p class="text-center mb-1"><%= link_to("Nutzungsbedingungen", "https://bbb.gymwm.de/gymwm/nutzungsbedingungen.html", target: "_blank", rel: "noopener").html_safe %></p>
+      </div>
+      <div class="col-lg-3 col-md-3">
+         <p class="text-center mb-1"><%= t("footer.powered_by", href: link_to(t("greenlight"), "https://bigbluebutton.org/2018/07/09/greenlight-2-0/", target: "_blank", rel: "noopener")).html_safe %> <%= Greenlight::Application::VERSION %></p>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <%= render "shared/components/cookie_warning" %>
+
